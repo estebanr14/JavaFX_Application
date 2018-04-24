@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package controladoresFX;
 
 
@@ -12,21 +8,13 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import static javafx.scene.AccessibleAttribute.FONT;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.canvas.Canvas;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Paint;
-import javafx.scene.shape.Rectangle;
-import javafx.scene.shape.StrokeType;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
@@ -61,13 +49,9 @@ public class FXMLProyectosController implements Initializable {
         btnProyecto.setText("Proyecto "+contadorProyectos);
         btnProyecto.setFont(Font.font("System", FontWeight.NORMAL, 50));
         btnProyecto.setOnAction((ActionEvent e1) -> {
-             
             abrirProyecto(btnProyecto.getText());
         });
-        
-      //  btnProyecto.setFont(FONT.);
-        proyectosContainer.getChildren().add(btnProyecto);
-
+                proyectosContainer.getChildren().add(btnProyecto);
     }
     
     public void abrirProyecto(String nombreProyecto) {       
@@ -77,7 +61,7 @@ public class FXMLProyectosController implements Initializable {
             stage.setScene(new Scene( (AnchorPane) loader.load()));
             
             FXMLModulosController controller = loader.<FXMLModulosController>getController();
-            controller.setTextNombre(nombreProyecto);
+            controller.setNombreProyecto(nombreProyecto);
             controller.setStageProyectos((Stage) containerCuerpo.getScene().getWindow());
             
             stage.show();

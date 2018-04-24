@@ -35,6 +35,7 @@
                         <Image url="@../Imagenes/monedas.png" />
                      </image>
                   </ImageView>
+                  <Button mnemonicParsing="false" onAction="#abrirModuloUno" text="Abrir módulo" />
                </children>
             </VBox>
             <VBox fx:id="moduloDos" alignment="CENTER" prefHeight="650.0" prefWidth="300.0" spacing="65.0">
@@ -49,6 +50,7 @@
                         <Image url="@../Imagenes/acuerdo.png" />
                      </image>
                   </ImageView>
+                  <Button mnemonicParsing="false" text="Abrir módulo" />
                </children>
             </VBox>
             <VBox fx:id="moduloTres" alignment="CENTER" prefHeight="650.0" prefWidth="300.0" spacing="65.0">
@@ -63,6 +65,7 @@
                         <Image url="@../Imagenes/presentacion.png" />
                      </image>
                   </ImageView>
+                  <Button mnemonicParsing="false" text="Abrir módulo" />
                </children>
             </VBox>
             <VBox fx:id="moduloCuatro" alignment="CENTER" prefHeight="650.0" prefWidth="300.0" spacing="65.0">
@@ -77,6 +80,7 @@
                         <Image url="@../Imagenes/grafico-circular.png" />
                      </image>
                   </ImageView>
+                  <Button mnemonicParsing="false" text="Abrir módulo" />
                </children>
             </VBox>
          </children>
