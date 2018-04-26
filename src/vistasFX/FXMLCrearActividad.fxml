@@ -3,17 +3,27 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladoresFX.FXMLCrearActividadController">
    <children>
       <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="300.0" spacing="30.0">
          <children>
-            <Button fx:id="btnCapítuloUno" mnemonicParsing="false" onAction="#btn_Capitulo1" text="Capítulo 1" />
-            <Button fx:id="btnCapítuloDos" mnemonicParsing="false" onAction="#btn_Capitulo2" text="Capítulo 2" />
-            <Button fx:id="btnCapítuloTres" mnemonicParsing="false" onAction="#btn_Capitulo3" text="Capítulo 3" />
+            <Label text="CAPÍTULOS">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnCapítuloUno" mnemonicParsing="false" text="Capítulo 1" />
+            <Button fx:id="btnCapítuloDos" mnemonicParsing="false" text="Capítulo 2" />
+            <Button fx:id="btnCapítuloTres" mnemonicParsing="false" text="Capítulo 3" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="." />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="." />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="." />
@@ -23,7 +33,7 @@
             <Insets top="50.0" />
          </padding>
       </VBox>
-      <VBox fx:id="container_ItemsCapitulo1" layoutX="300.0" prefHeight="600.0" prefWidth="500.0" spacing="30.0" visible="false">
+      <VBox fx:id="container_ItemsCapitulo1" alignment="TOP_CENTER" layoutX="300.0" prefHeight="600.0" prefWidth="500.0" spacing="30.0" visible="false">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
@@ -31,13 +41,91 @@
             <Insets top="50.0" />
          </padding>
          <children>
-            <CheckBox mnemonicParsing="false" text="Item 1.1" />
-            <CheckBox mnemonicParsing="false" text="Item 1.2" />
-            <CheckBox mnemonicParsing="false" text="Item 1.3" />
-            <CheckBox mnemonicParsing="false" text="Item 1.4" />
-            <CheckBox mnemonicParsing="false" text="Item 1.5" />
+            <Label text="ÍTEMS CAPÍTULO UNO">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+            <ScrollPane prefHeight="300.0" prefWidth="300.0" vbarPolicy="ALWAYS">
+               <content>
+                  <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="450.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="ÍTEM 1.1 (NOMBRE)">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </CheckBox>
+                              <Button mnemonicParsing="false" onAction="#btn_MostrarInfoItem" text="Ver ítem" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="ÍTEM 1.2 (NOMBRE)">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </CheckBox>
+                              <Button mnemonicParsing="false" onAction="#btn_MostrarInfoItem" text="Ver ítem" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="ÍTEM 1.3 (NOMBRE)">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </CheckBox>
+                              <Button mnemonicParsing="false" onAction="#btn_MostrarInfoItem" text="Ver ítem" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="ÍTEM 1.4 (NOMBRE)">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </CheckBox>
+                              <Button mnemonicParsing="false" onAction="#btn_MostrarInfoItem" text="Ver ítem" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="ÍTEM 1.5 (NOMBRE)">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </CheckBox>
+                              <Button mnemonicParsing="false" onAction="#btn_MostrarInfoItem" text="Ver ítem" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="ÍTEM 1.6 (NOMBRE)">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </CheckBox>
+                              <Button mnemonicParsing="false" onAction="#btn_MostrarInfoItem" text="Ver ítem" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="ÍTEM 1.7 (NOMBRE)">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </CheckBox>
+                              <Button mnemonicParsing="false" onAction="#btn_MostrarInfoItem" text="Ver ítem" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
          </children></VBox>
-      <VBox fx:id="container_ItemsCapitulo2" layoutX="300.0" layoutY="10.0" prefHeight="600.0" prefWidth="500.0" spacing="30.0" visible="false">
+      <VBox fx:id="container_ItemsCapitulo2" alignment="TOP_CENTER" layoutX="300.0" prefHeight="600.0" prefWidth="500.0" spacing="30.0" visible="false">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
@@ -45,14 +133,92 @@
             <Insets top="50.0" />
          </padding>
          <children>
-            <CheckBox mnemonicParsing="false" text="Item 2.1" />
-            <CheckBox mnemonicParsing="false" text="Item 2.2" />
-            <CheckBox mnemonicParsing="false" text="Item 2.3" />
-            <CheckBox mnemonicParsing="false" text="Item 2.4" />
-            <CheckBox mnemonicParsing="false" text="Item 2.5" />
+            <Label text="ÍTEMS CAPÍTULO DOS">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+            <ScrollPane prefHeight="300.0" prefWidth="300.0" vbarPolicy="ALWAYS">
+               <content>
+                  <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="450.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="ÍTEM 2.1 (NOMBRE)">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </CheckBox>
+                              <Button mnemonicParsing="false" onAction="#btn_MostrarInfoItem" text="Ver ítem" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="ÍTEM 2.2 (NOMBRE)">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </CheckBox>
+                              <Button mnemonicParsing="false" onAction="#btn_MostrarInfoItem" text="Ver ítem" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="ÍTEM 2.3 (NOMBRE)">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </CheckBox>
+                              <Button mnemonicParsing="false" onAction="#btn_MostrarInfoItem" text="Ver ítem" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                           <children>
+                              <CheckBox mnemonicParsing="false" onAction="#btn_MostrarInfoItem" text="ÍTEM 2.4 (NOMBRE)">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </CheckBox>
+                              <Button mnemonicParsing="false" onAction="#btn_MostrarInfoItem" text="Ver ítem" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="ÍTEM 2.5 (NOMBRE)">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </CheckBox>
+                              <Button mnemonicParsing="false" onAction="#btn_MostrarInfoItem" text="Ver ítem" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="ÍTEM 2.6 (NOMBRE)">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </CheckBox>
+                              <Button mnemonicParsing="false" onAction="#btn_MostrarInfoItem" text="Ver ítem" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="ÍTEM 2.7 (NOMBRE)">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </CheckBox>
+                              <Button mnemonicParsing="false" onAction="#btn_MostrarInfoItem" text="Ver ítem" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
          </children>
       </VBox>
-      <VBox fx:id="container_ItemsCapitulo3" layoutX="300.0" layoutY="10.0" prefHeight="600.0" prefWidth="500.0" spacing="30.0" visible="false">
+      <VBox fx:id="container_ItemsCapitulo3" alignment="TOP_CENTER" layoutX="300.0" prefHeight="600.0" prefWidth="500.0" spacing="30.0" visible="false">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
@@ -60,12 +226,93 @@
             <Insets top="50.0" />
          </padding>
          <children>
-            <CheckBox mnemonicParsing="false" text="Item 3.1" />
-            <CheckBox mnemonicParsing="false" text="Item 3.2" />
-            <CheckBox mnemonicParsing="false" text="Item 3.3" />
-            <CheckBox mnemonicParsing="false" text="Item 3.4" />
-            <CheckBox mnemonicParsing="false" text="Item 3.5" />
+            <Label text="ÍTEMS CAPÍTULO TRES">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+            <ScrollPane prefHeight="300.0" prefWidth="300.0" vbarPolicy="ALWAYS">
+               <content>
+                  <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="450.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="ÍTEM 3.1 (NOMBRE)">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </CheckBox>
+                              <Button mnemonicParsing="false" onAction="#btn_MostrarInfoItem" text="Ver ítem" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="ÍTEM 3.2 (NOMBRE)">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </CheckBox>
+                              <Button mnemonicParsing="false" onAction="#btn_MostrarInfoItem" text="Ver ítem" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="ÍTEM 3.3 (NOMBRE)">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </CheckBox>
+                              <Button mnemonicParsing="false" onAction="#btn_MostrarInfoItem" text="Ver ítem" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                           <children>
+                              <CheckBox mnemonicParsing="false" onAction="#btn_MostrarInfoItem" text="ÍTEM 3.4 (NOMBRE)">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </CheckBox>
+                              <Button mnemonicParsing="false" onAction="#btn_MostrarInfoItem" text="Ver ítem" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="ÍTEM 3.5 (NOMBRE)">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </CheckBox>
+                              <Button mnemonicParsing="false" onAction="#btn_MostrarInfoItem" text="Ver ítem" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="ÍTEM 3.6 (NOMBRE)">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </CheckBox>
+                              <Button mnemonicParsing="false" onAction="#btn_MostrarInfoItem" text="Ver ítem" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="ÍTEM 3.7 (NOMBRE)">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </CheckBox>
+                              <Button mnemonicParsing="false" onAction="#btn_MostrarInfoItem" text="Ver ítem" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
          </children>
       </VBox>
+      <Button layoutX="400.0" layoutY="518.0" mnemonicParsing="false" onAction="#btn_guardar" text="Guardar" />
+      <Button layoutX="528.0" layoutY="518.0" mnemonicParsing="false" onAction="#btn_Cancelar" text="Cancelar" />
+      <TextField fx:id="nombreActividad" layoutX="418.0" layoutY="464.0" promptText="Nombre de la actividad" />
    </children>
 </AnchorPane>

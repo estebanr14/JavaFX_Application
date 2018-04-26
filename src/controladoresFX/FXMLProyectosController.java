@@ -26,32 +26,52 @@ import javafx.stage.Stage;
  */
 public class FXMLProyectosController implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
     
     @FXML private VBox proyectosContainer;
     @FXML private VBox containerCuerpo;
     @FXML private VBox containerCabeza;
     @FXML private VBox containerPie;
     private int contadorProyectos=0;
+    private String nombreProyecto;
 
     
-    public void BTNcrearProyecto(ActionEvent e){
-        Double alturaContainer = proyectosContainer.getPrefHeight();
-        proyectosContainer.setPrefHeight(alturaContainer+120);
-        
-        contadorProyectos++;
-        
-        Button btnProyecto = new Button();
-        btnProyecto.setPrefHeight(90.0);
-        btnProyecto.setPrefWidth(790.0);
-        btnProyecto.setText("Proyecto "+contadorProyectos);
-        btnProyecto.setFont(Font.font("System", FontWeight.NORMAL, 50));
-        btnProyecto.setOnAction((ActionEvent e1) -> {
-            abrirProyecto(btnProyecto.getText());
-        });
-                proyectosContainer.getChildren().add(btnProyecto);
+    public void btn_crearProyecto(ActionEvent e){
+        try {
+            //ABRIR NUEVA VENTANA PARA DATOS DEL PROYECTO
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vistasFX/FXMLCrearProyecto.fxml"));
+            Stage stageCrearProyecto = new Stage();
+            stageCrearProyecto.setScene(new Scene( (AnchorPane) loader.load()));
+            
+            Stage thisStage = (Stage) containerCuerpo.getScene().getWindow();
+            FXMLCrearProyectoController crearProyectoController  = loader.<FXMLCrearProyectoController>getController();
+            crearProyectoController.setProyectosController(thisStage, this);
+            
+            stageCrearProyecto.show();
+           
+        } catch (IOException ex) {
+            Logger.getLogger(FXMLProyectosController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void setNombreProyecto(String nombre){
+        nombreProyecto = nombre;
+    }   
+    
+    public void insertarProyecto(){
+            //CREAR EL BOTÓN E INSERTARLO EN LA VENTANA
+            contadorProyectos++;
+            Double alturaContainer = proyectosContainer.getPrefHeight();
+            proyectosContainer.setPrefHeight(alturaContainer+120);
+                 
+            Button btnProyecto = new Button();
+            btnProyecto.setPrefHeight(90.0);
+            btnProyecto.setPrefWidth(790.0);
+            btnProyecto.setText(nombreProyecto);
+            btnProyecto.setFont(Font.font("System", FontWeight.NORMAL, 50));
+            btnProyecto.setOnAction((ActionEvent e1) -> {
+                abrirProyecto(nombreProyecto);
+            });
+            proyectosContainer.getChildren().add(btnProyecto);
     }
     
     public void abrirProyecto(String nombreProyecto) {       
@@ -76,9 +96,7 @@ public class FXMLProyectosController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        containerCuerpo.getStyleClass().add("container");
-        containerPie.getStyleClass().add("container");
-        containerCabeza.getStyleClass().add("container");
+
     }    
     
 }

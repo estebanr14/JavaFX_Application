@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladoresFX.FXMLModuloUnoController">
+<AnchorPane id="AnchorPane" fx:id="container" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladoresFX.FXMLModuloUnoController">
    <children>
       <VBox alignment="CENTER" prefHeight="150.0" prefWidth="1200.0">
          <children>
@@ -22,10 +22,13 @@
       </VBox>
       <HBox layoutY="150.0" prefHeight="500.0" prefWidth="1200.0">
          <children>
-            <ScrollPane prefHeight="200.0" prefWidth="1099.0">
+            <ScrollPane hbarPolicy="ALWAYS" prefHeight="200.0" prefWidth="1099.0" vbarPolicy="NEVER">
                <content>
-                  <AnchorPane prefHeight="500.0" prefWidth="300.0" />
+                  <HBox fx:id="containerActividades" prefHeight="450.0" prefWidth="300.0" />
                </content>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
             </ScrollPane>
          </children>
          <padding>
@@ -35,7 +38,7 @@
       <HBox alignment="CENTER" layoutY="650.0" prefHeight="150.0" prefWidth="1200.0" spacing="60.0">
          <children>
             <Button mnemonicParsing="false" onAction="#volverAModulos" text="Volver módulos" />
-            <Button fx:id="btn_agregarActividad" mnemonicParsing="false" onAction="#BTN_agregarActividad" text="Agregar actividad" />
+            <Button fx:id="btn_agregarActividad" mnemonicParsing="false" onAction="#btn_agregarActividad" text="Agregar actividad" />
          </children>
       </HBox>
    </children>

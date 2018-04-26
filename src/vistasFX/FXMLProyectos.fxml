@@ -34,7 +34,7 @@
       </VBox>
       <VBox fx:id="containerPie" alignment="CENTER" layoutY="700.0" prefHeight="100.0" prefWidth="1200.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#BTNcrearProyecto" text="Crear proyecto">
+            <Button mnemonicParsing="false" onAction="#btn_crearProyecto" text="Crear proyecto">
                <font>
                   <Font size="22.0" />
                </font>
