@@ -20,8 +20,8 @@ public class JavaFXApplication1 extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/vistasFX/FXMLModuloUno.fxml"));
-       // root.setId("root");
+        Parent root = FXMLLoader.load(getClass().getResource("/vistasFX/FXMLPresentacion.fxml"));
+        root.setId("root");
         
         Scene scene = new Scene(root);
         scene.getStylesheets().add(this.getClass().getResource("/recursos/style.css").toExternalForm());

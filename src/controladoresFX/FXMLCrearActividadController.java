@@ -13,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -34,6 +35,7 @@ public class FXMLCrearActividadController implements Initializable {
     @FXML private Button btnCapítuloDos;
     @FXML private Button btnCapítuloTres;
     @FXML private TextField nombreActividad;
+    @FXML private CheckBox item11;
     private FXMLModuloUnoController controller_moduloUno;
     
         @Override

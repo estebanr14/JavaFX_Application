@@ -4,13 +4,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="controladoresFX.FXMLActividadController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: linear-gradient( white, #999999);" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladoresFX.FXMLActividadController">
    <children>
-      <Label layoutX="72.0" layoutY="167.0" text="INFORMACION DE ACTIVIDAD">
+      <Label layoutX="36.0" layoutY="161.0" text="INFORMACION DE ACTIVIDAD">
          <font>
             <Font size="45.0" />
          </font>
       </Label>
+      <Label layoutX="265.0" layoutY="227.0" text="Capítulos, ítems..." />
    </children>
 </AnchorPane>

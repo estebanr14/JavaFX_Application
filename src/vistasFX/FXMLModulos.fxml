@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -9,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladoresFX.FXMLModulosController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: linear-gradient( white, #999999);" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladoresFX.FXMLModulosController">
    <children>
       <VBox alignment="CENTER" prefHeight="150.0" prefWidth="1200.0" spacing="10.0">
          <children>
@@ -20,6 +21,9 @@
             </Text>
             <Button mnemonicParsing="false" onAction="#volverAProyectos" text="Ver Proyectos" />
          </children>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
       </VBox>
       <HBox fx:id="modulosContainer" layoutX="10.0" layoutY="160.0" prefHeight="650.0" prefWidth="1200.0" spacing="10.0">
          <children>

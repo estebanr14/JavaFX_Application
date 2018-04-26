@@ -71,14 +71,14 @@ public class FXMLModuloUnoController implements Initializable {
     public void insertarActividad(String nombreActividad){
             //SE CREA EL BOTÓN CORRESPONDIENTE A LA ACTIVIDAD
         Double tamano=  containerActividades.getPrefWidth();
-        containerActividades.setPrefWidth(tamano+300);
+        containerActividades.setPrefWidth(tamano+150);
         
         VBox infoActividad = new VBox();
         infoActividad.setAlignment(Pos.CENTER);
         infoActividad.setPrefWidth(300);
         infoActividad.setPrefHeight(450);
         Button  button = new Button (nombreActividad);
-        button.setPrefSize(100, 100);
+        button.setPrefSize(125, 100);
         button.setOnAction((ActionEvent e1) -> {
             this.abrirActividad();
         });
